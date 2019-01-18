@@ -152,7 +152,7 @@ int main(void)
 		vao.Bind();
 		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 		
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, &indices);//problem
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);//problem
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
