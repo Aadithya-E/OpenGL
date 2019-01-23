@@ -119,17 +119,16 @@ int main(void)
 	VertexBufferLayout vbl;
 	vbl.Push<float>(2, GL_FALSE);
 	VertexBuffer vb(positions, sizeof(positions), GL_STATIC_DRAW);
-	vb.Bind();
-	//vao.AddBuffer(vb, vbl);
-	//vao.Bind();
-	unsigned int vao_t;
-	glGenVertexArrays(1, &vao_t);
-	glBindVertexArray(vao_t);
+	vao.AddBuffer(vb, vbl);
+	vao.Bind();
+	//unsigned int vao_t;
+	//glGenVertexArrays(1, &vao_t);
+	//glBindVertexArray(vao_t);
 	
 
 	IndexBuffer ib(indices, 6, GL_STATIC_DRAW); 
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), 0);
+	//glEnableVertexAttribArray(0);
+	//glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), 0);
 
 
 	float increment = 0.01f;
